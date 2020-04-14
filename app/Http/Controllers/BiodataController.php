@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\BiodataMahasiswa;
+use App\Exports\MahaiswaExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BiodataController extends Controller
 {
@@ -95,5 +97,10 @@ class BiodataController extends Controller
     {
         BiodataMahasiswa::where("id",$id)->delete();
         return redirect()->route("biodata.index");
+    }
+
+    public function export_excel()
+    {
+        return Excel::download(new MahaiswaExport, 'Biodata-Mahasiswa.xlsx');
     }
 }

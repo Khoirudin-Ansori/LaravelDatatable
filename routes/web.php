@@ -30,6 +30,8 @@ Route::get("/biodata-mahasiswa/{id}/edit","BiodataController@edit")->name("bioda
 Route::post("/biodata-mahasiswa/{id}/update","BiodataController@update")->name("biodata.update");
 Route::get("/biodata-mahasiswa/{id}/destroy","BiodataController@destroy")->name("biodata.destroy");
 
+Route::get('/bioadata-mahasiswa/export_excel', 'BiodataController@export_excel')->name("biodata.export");
+
 
 
 
