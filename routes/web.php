@@ -21,6 +21,7 @@ Route::get("/login", "LoginController@showLoginForm")->name("login.index");
 Route::post("/login", "LoginController@login")->name("login.login");
 
 //listmahasiswa
+Route::get("mail/send","MailController@send");
 
 Route::get("/biodata-mahasiswa","BiodataController@index")->name("biodata.index");
 Route::get("/biodata-mahasiswa/{id}/detail","BiodataController@show")->name("biodata.show");
@@ -29,7 +30,6 @@ Route::post("/biodata-mahasiswa","BiodataController@store")->name("biodata.store
 Route::get("/biodata-mahasiswa/{id}/edit","BiodataController@edit")->name("biodata.edit");
 Route::post("/biodata-mahasiswa/{id}/update","BiodataController@update")->name("biodata.update");
 Route::get("/biodata-mahasiswa/{id}/destroy","BiodataController@destroy")->name("biodata.destroy");
-
 Route::get('/bioadata-mahasiswa/export_excel', 'BiodataController@export_excel')->name("biodata.export");
 
 

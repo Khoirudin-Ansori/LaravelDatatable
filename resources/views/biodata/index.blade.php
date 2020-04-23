@@ -4,8 +4,9 @@
 @endpush
 @section("content")
 	<h1>Daftar Mahasiswa</h1>
-	<a href="{{route('biodata.create')}}">Add Data</a>
-	<a href="{{route('biodata.export')}}" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
+	<a href="{{route('biodata.create')}}">Add Data</a> | 
+	<a href="/mail/send">Send email</a> |
+	<a href="{{route('biodata.export')}}" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a> 
 	{!!$html->table()!!}
 @endsection
 @push("script")
