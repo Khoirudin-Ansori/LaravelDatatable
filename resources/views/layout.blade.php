@@ -13,7 +13,7 @@
 
     <div class="container">
         <div class="col-md-12" style="margin-top: 15px;">
-            <a href="{{ route('logout') }}">Logout</a>
+            <!-- <a href="{{ route('logout') }}">Logout</a> -->
         </div>
 
         <div class="col-md-12">

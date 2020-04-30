@@ -1,14 +1,39 @@
-@extends("layout")
+@extends("layout.app")
 
 @section("content")
-	<ul>
-		<li>ID :{{ $data -> id}}</li>
-		<li>Nama :{{ $data -> name}}</li>
-		<li>Nim : {{ $data -> nim}}</li>
-		<li>Alamat : {{ $data -> address}}</li>
-		<li>Foto : <img src="{{ Storage::url($data->photo)}}" width="100dp"></li>
+<!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Detail Mahasiswa</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Kelola Mahasiswa</a></li>
+              <li class="breadcrumb-item active">Detail Mhasiswa</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+<!-- /.content-header --> 
+<section class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<ul>
+					<li>ID :{{ $data -> id}}</li>
+					<li>Nama :{{ $data -> name}}</li>
+					<li>Nim : {{ $data -> nim}}</li>
+					<li>Alamat : {{ $data -> address}}</li>
+					<li>Foto : <img src="{{ Storage::url($data->photo)}}" width="100dp"></li>
 
-	</ul>
+				</ul>
 
-	<a href="{{ route('biodata.index')}}">Kembali</a>
+				<a href="{{ route('biodata.index')}}">Kembali</a>
+			</div>
+		</div>
+	</div>
+</section>
 @endsection

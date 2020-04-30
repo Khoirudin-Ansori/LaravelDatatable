@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('login-form');
+    return view('dashboard');
 });
 
 Route::get("/logout","LoginController@log(arg)")->name("logout");
